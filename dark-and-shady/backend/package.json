@@ -1,0 +1,14 @@
+{
+  "name": "dark-reel-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/handlers/movies.js",
+  "scripts": {
+    "deploy": "echo \"SAM CLI required for deploy\" && exit 1",
+    "local": "node server.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "*"
+  },
+  "devDependencies": {}
+}

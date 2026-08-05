@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: nodejs18.x
+    Environment:
+      Variables:
+        MOVIES_TABLE: !Ref MovieTable
+
+Resources:
+  MoviesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/movies.handler
+      CodeUri: .
+      Events:
+        MoviesGetApi:
+          Type: Api
+          Properties:
+            Path: /movies
+            Method: get
+        MoviesCreateApi:
+          Type: Api
+          Properties:
+            Path: /movies
+            Method: post
+
+  SearchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/search.handler
+      CodeUri: .
+      Events:
+        SearchApi:
+          Type: Api
+          Properties:
+            Path: /search
+            Method: get
+
+  MovieTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: DarkReelMovies
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST

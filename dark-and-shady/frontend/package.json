@@ -1,0 +1,18 @@
+{
+  "name": "dark-reel-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "vite": "*",
+    "@vitejs/plugin-react": "*"
+  }
+}
