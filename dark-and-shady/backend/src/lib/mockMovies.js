@@ -68,5 +68,16 @@ module.exports = [
     "cast": ["Georgina Campbell", "Bill Skarsgård", "Justin Long"],
     "rating": 7.0,
     "review": "A wildly unpredictable and claustrophobic horror ride that constantly subverts expectations."
+  },
+  {
+    "id": "movie-8",
+    "title": "Old",
+    "subGenre": ["Psychological", "Body Horror", "Mystery"],
+    "releaseYear": 2021,
+    "director": "M. Night Shyamalan",
+    "cast": ["Gael García Bernal", "Vicky Krieps", "Rufus Sewell", "Alex Wolff"],
+    "rating": 6.5,
+    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80", // Placeholder: Secluded Beach
+    "review": "A tropical vacation turns into a terrifying race against mortality when a secluded beach causes rapid aging—compressing entire lifetimes into a single day."
   }
 ];
