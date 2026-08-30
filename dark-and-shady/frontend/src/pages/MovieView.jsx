@@ -18,6 +18,18 @@ export default function MovieView({ movie, onBack }) {
         <div className="detail-row">
           <span className="detail-label">Rating</span>
           <span>{movie.rating?.toFixed(1) || '—'}</span>
+        </div>        
+        <div className="detail-row">
+          <span className="detail-label">Source</span>
+          <span>{movie.ratingSource }</span>
+        </div>
+        <div className="detail-row">
+          <span className="detail-label">IMDb URL</span>
+          <span>
+            <a href={movie.imdbUrl} target="_blank" rel="noopener noreferrer">
+              View on IMDb
+            </a>
+          </span>
         </div>
         <div className="detail-row">
           <span className="detail-label">Review</span>

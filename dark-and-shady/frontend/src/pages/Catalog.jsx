@@ -67,7 +67,17 @@ export default function Catalog({ onSelectMovie }) {
       >
         <header>
           <h3>{movie.title}</h3>
-          <span className="movie-rating">{movie.rating?.toFixed(1) || '—'}</span>
+          <span className="movie-rating-wrapper">
+            <span
+              className="movie-rating"
+              aria-label="Official ratings sourced from IMDb. Within my personal vault, however, every selected masterpiece commands a perfect 10/10."
+            >
+              {movie.rating?.toFixed(1) || '—'}
+            </span>
+            <span className="movie-rating-tooltip" role="tooltip">
+              Official ratings sourced from IMDb. Within my personal vault, however, every selected masterpiece commands a perfect 10/10.
+            </span>
+          </span>
         </header>
         <p className="movie-meta">
           {movie.subGenre} · {movie.releaseYear} · Directed by {movie.director}
